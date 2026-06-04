@@ -1,0 +1,7 @@
+{
+  "custom/distro": {
+    "format": "",
+    "on-click": "omarchy-menu",
+    "tooltip": false
+  }
+}

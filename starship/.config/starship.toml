@@ -1,0 +1,36 @@
+add_newline = true
+command_timeout = 200
+
+# The double \n\n creates the vertical space between the tablet and the cursor
+format = """
+[](fg:#30363d)\
+$directory\
+[](fg:#30363d bg:#444c56)\
+$git_branch\
+$git_status\
+[](fg:#444c56)
+
+$character """
+
+[directory]
+style = "fg:#c9d1d9 bg:#30363d"
+format = "[ $path ]($style)"
+truncation_length = 0
+fish_style_pwd_dir_length = 0
+truncate_to_repo = false
+
+[git_branch]
+symbol = " "
+style = "fg:#c9d1d9 bg:#444c56"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "fg:#c9d1d9 bg:#444c56"
+format = "[($all_status$ahead_behind )]($style)"
+
+[time]
+disabled = true
+
+[character]
+success_symbol = "[❯](bold cyan) "
+error_symbol = "[❯](bold red) "

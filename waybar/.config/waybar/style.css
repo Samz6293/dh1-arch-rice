@@ -1,0 +1,35 @@
+@import "tokens/colors.css";
+@import "tokens/state.css";
+@import "tokens/workspace.css";
+@import "tokens/widget.css";
+@import "tokens/batt-clock.css";
+@import "tokens/slider.css";
+
+
+/* --- YOUR CUSTOM PALETTE OVERRIDES --- */
+@define-color onyx-dark      #0B0E12;
+@define-color carbon-black   #171F23;
+@define-color jet-black      #2F3B3E;
+@define-color stone-brown    #544D4A;
+@define-color silver-light   #BDC3C1;
+
+/* --- ENGINE REMAPPING --- */
+@define-color surface_container          @carbon-black;
+@define-color surface_container_highest  @jet-black;
+@define-color primary                    @silver-light;
+@define-color secondary_fixed_dim        @silver-light;
+@define-color tertiary                   @onyx-dark;
+@define-color on_primary                 @stone-brown;
+
+* {
+  margin: 0;
+  padding: 0;
+  min-height: 0px;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+window#waybar {
+  background: transparent;
+}

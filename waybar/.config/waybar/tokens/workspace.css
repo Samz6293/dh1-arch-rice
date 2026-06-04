@@ -1,0 +1,49 @@
+@import "colors.css";
+
+#workspaces {
+  margin: 4px 5px;
+  padding: 4px 12px;
+  background-color: @surface_container;
+  border-radius: 20px;
+}
+
+#workspaces button {
+  min-width: 0px;
+  min-height: 0px;
+  padding: 0 6px;
+  margin: 0;
+  background: transparent;
+  
+  /* WINDOW OPEN BACKGROUND INDICATOR:
+     If a workspace has windows open but isn't focused, it will use this 
+     noticeably brighter color so you know tabs are waiting there. */
+  color: @on-primary;       
+  
+  font-size: 10pt;
+  transition: color 0.2s ease;
+}
+
+/* FOCUSED WORKSPACE: Always stays your main bright palette accent color */
+#workspaces button.active,
+#workspaces button.active.empty {
+  color: @primary;
+}
+
+/* NO WINDOWS OPEN: Completely dims out the dot to your stone-brown shade */
+#workspaces button.empty {
+  color: @stone-brown;
+}
+
+#workspaces button:hover {
+  background: transparent;
+  color: @tertiary;
+}
+
+#workspaces button.urgent {
+  color: @error_container;
+}
+
+#workspaces button label {
+  padding: 0;
+  margin: 0;
+}

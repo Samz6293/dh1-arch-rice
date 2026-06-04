@@ -1,0 +1,9 @@
+{
+    "clock": {
+        "timezone": "Asia/Dhaka",
+        // The '0:' index explicitly forces the parser to reuse the time object for both blocks smoothly
+        "format": "󱎫 <span size='11pt'>{0:%I:%M %p}</span>  󰃭 <span size='11pt'>{0:%d %b %Y}</span>",
+        "format-alt": "󱎫 <span size='11pt'>{0:%I:%M %p}</span>  󰃭 <span size='11pt'>{0:%d/%m/%Y}</span>",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    }
+}
