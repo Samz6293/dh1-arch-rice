@@ -1,0 +1,97 @@
+/* Color Palette */
+@define-color ink_black #080E13;
+@define-color ink_black_2 #13191D;
+@define-color chestnut #7D3E2B;
+@define-color olive_wood #826F58;
+@define-color white #FFFFFE;
+@define-color jet_black #2F3B3F;
+@define-color dust_grey #D4D7D4;
+@define-color grey #717B7C;
+@define-color charcoal #554F4D;
+@define-color jet_black_2 #31393B;
+
+* {
+    background-image: none;
+    box-shadow: none;
+}
+
+/* Semi-transparent background overlay */
+window {
+    background-color: rgba(8, 14, 19, 0.8); 
+}
+
+/* Base button styling - completely flush */
+button {
+    border: none;
+    border-radius: 0;
+    margin: 0; /* Pulls everything tight */
+    color: @dust_grey;
+    background-color: @jet_black;
+    background-repeat: no-repeat;
+    background-position: center 35%; 
+    background-size: 20%;
+    padding-top: 80px; 
+    
+    /* Smooth transition for the hover pop effect */
+    transition: background-color 0.2s ease, background-size 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ==========================
+   Outer Corners & Inner Grid Lines
+   ========================== */
+
+#lock {
+    border-top-left-radius: 40px;
+    box-shadow: inset -1px -1px 0 @charcoal; 
+}
+
+#suspend {
+    border-top-right-radius: 40px;
+    box-shadow: inset 0 -1px 0 @charcoal; 
+}
+
+#shutdown {
+    border-bottom-left-radius: 40px;
+    box-shadow: inset -1px 0 0 @charcoal; 
+}
+
+#reboot {
+    border-bottom-right-radius: 40px;
+}
+
+/* ==========================
+   Hover & Pop Effect
+   ========================== */
+
+button:active, button:hover {
+    background-color: @jet_black_2;
+    background-size: 26%; /* Simulates the button growing */
+    color: @white;
+    /* Wraps the hovered button in your accent color */
+    box-shadow: inset 0 0 0 2px @olive_wood; 
+    outline-style: none;
+}
+
+/* Keyboard Focus (Subtle) */
+button:focus {
+    box-shadow: inset 0 0 0 1px @dust_grey; 
+    outline-style: none;
+}
+
+/* ==========================
+   Normal State Icon Paths
+   ========================== */
+
+#lock { background-image: image(url("/home/dh1/.config/wlogout/icons/lock.png")); }
+#suspend { background-image: image(url("/home/dh1/.config/wlogout/icons/hibernate.png")); }
+#shutdown { background-image: image(url("/home/dh1/.config/wlogout/icons/power.png")); }
+#reboot { background-image: image(url("/home/dh1/.config/wlogout/icons/restart.png")); }
+
+/* ==========================
+   Hover State Swaps
+   ========================== */
+
+#lock:active, #lock:hover { background-image: image(url("/home/dh1/.config/wlogout/icons/lock-hover.png")); }
+#suspend:active, #suspend:hover { background-image: image(url("/home/dh1/.config/wlogout/icons/hibernate-hover.png")); }
+#shutdown:active, #shutdown:hover { background-image: image(url("/home/dh1/.config/wlogout/icons/power-hover.png")); }
+#reboot:active, #reboot:hover { background-image: image(url("/home/dh1/.config/wlogout/icons/restart-hover.png")); }

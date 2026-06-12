@@ -1,7 +1,7 @@
 {
   "custom/distro": {
     "format": "",
-    "on-click": "omarchy-menu",
+    "on-click": "wlogout",
     "tooltip": false
   }
 }
