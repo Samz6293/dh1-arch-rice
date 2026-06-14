@@ -14,7 +14,8 @@ $character """
 
 [directory]
 style = "fg:#c9d1d9 bg:#30363d"
-format = "[ $path ]($style)"
+# Added an extra space on both sides of $path for padding
+format = "[  $path  ]($style)"
 truncation_length = 0
 fish_style_pwd_dir_length = 0
 truncate_to_repo = false
@@ -22,11 +23,13 @@ truncate_to_repo = false
 [git_branch]
 symbol = " "
 style = "fg:#c9d1d9 bg:#444c56"
-format = "[ $symbol$branch ]($style)"
+# Added padding around the branch name and symbol
+format = "[  $symbol$branch  ]($style)"
 
 [git_status]
 style = "fg:#c9d1d9 bg:#444c56"
-format = "[($all_status$ahead_behind )]($style)"
+# Added trailing padding to keep status indicators away from the right edge
+format = "[($all_status$ahead_behind  )]($style)"
 
 [time]
 disabled = true
