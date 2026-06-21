@@ -18,3 +18,5 @@ vim.opt.expandtab = true -- Turn tabs into spaces
 vim.g.terminal_color_8 = "#b2bbbc"
 -- You can also adjust color 0 (standard black) if you want to contrast it
 vim.g.terminal_color_0 = "#565f89"
+
+vim.g.autoformat = false
