@@ -1,0 +1,9 @@
+brave-bin
+limine-entry-tool
+localsend-bin
+vesktop
+vscodium-bin
+wlogout
+xdg-desktop-portal-hyprland-git
+yay
+yay-debug
